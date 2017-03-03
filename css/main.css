@@ -5,6 +5,7 @@ body{
 .container{
 	width: 100%;
 	max-width: 985px;
+	min-width: 300px;
 	margin: 0 auto;
 }
 
@@ -15,7 +16,7 @@ section .header{
 section .header-wrap{
 	position: relative;
 }
-section .description{
+.header-wrap .description{
 	color: #c6c6c6;
 	font-size: 12px;
 	width: 75%;
@@ -50,40 +51,117 @@ section .description{
 	width: 100%;
 	margin: 0;
 }
+.colums{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 68px;
+}
+.col{
+	box-sizing: border-box;
+	padding: 120px 10px 21px 10px;
+	width: 100%;
+	color: #2f549b;
+	text-align: center;
+	font-size: 14px;
+	border: 1px solid #e5e5e5;
+	margin: 5px 10px;
+}
+.col .title{
+	font-size: 36px;
+	margin: 6px 0;
+	font-weight: normal;
+}
+.col .description{
+	padding: 0 15px;
+	margin: 0 0 15px 0;
+
+}
+.col .description::after{
+	content: "";
+	display: block;
+	width: 50%;
+	height: 20px;
+	border-bottom: 1px solid #e5e5e5;
+	margin: 0 auto;
+
+}
+.col span{
+	color: #5e5e5e;
+	margin-bottom: 44px;
+	display: block;
+}
+.col a{
+	text-decoration: underline;
+	display: block;
+	color: #d9d9d9;
+
+}
+
+.directory{
+	background: url(../images/folder-icon.png) no-repeat center 27px;
+}
+.data{
+	background: url(../images/data-icon.png) no-repeat center 27px;
+}
+.employment{
+	background: url(../images/employment-icon.png) no-repeat center 27px;
+}
+.cloud{
+	background: url(../images/cloud-icon.png) no-repeat center 27px;
+}
 @media screen and (min-width: 440px) {
-	section .description{
+	.header-wrap .description{
 		font-size: 13px;
 	}
-	.main-box{
+	.header-wrap .main-box{
 		padding: 67px 0 14px 0;
+	}
+	.col{
+		width: 70%;
 	}
 }
 
 @media screen and (min-width: 510px) {
-	section .description{
+	.header-wrap .description{
 		font-size: 16px;
 	}
-	.main-box{
+	.header-wrap .main-box{
 		padding: 67px 0 46px 0;
+	}
+	.col{
+		width: 45%;
 	}
 }
 @media screen and (min-width: 631px) {
-	section .description{
+	.header-wrap .description{
 		font-size: 16px;
 	}
-	.main-box{
+	.header-wrap .main-box{
 		padding: 67px 0 10px 0;
+	}
+	.col{
+		width: 40%;
 	}
 }
 
-@media screen and (min-width: 980px) {
-	section .description{
+@media screen and (min-width: 720px) {
+	.col{
+		width: 35%;
+	}
+}
+
+@media screen and (min-width: 985px) {
+	.container{
+		width: 99%;
+	}
+	.header-wrap .description{
 		font-size: 22px;
 		width: 76.5%;
 		line-height: 2;
 		padding: 0.6% 25% 0.4% 0;
 	}
-	.main-box{
+	.header-wrap .main-box{
 		background: url(../images/data-center-icon.png) 
 		no-repeat 14% 50%,#2f549b;
 		width: 46%;
@@ -102,4 +180,11 @@ section .description{
 		display: inline-block;
 		width: 10%;
 	}
+	.colums{
+		justify-content: space-between;
+	}
+	.col{
+		width: 22%;
+	}
+
 }
