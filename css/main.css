@@ -67,6 +67,13 @@ section .header-wrap{
 	border: 1px solid #e5e5e5;
 	margin: 5px 10px;
 }
+.col:hover{
+	background-color: #2f549b;
+	color: #fff;
+}
+.col:hover span{
+	color: #7c9cdb;
+}
 .col .title{
 	font-size: 36px;
 	margin: 6px 0;
@@ -95,7 +102,6 @@ section .header-wrap{
 	text-decoration: underline;
 	display: block;
 	color: #d9d9d9;
-
 }
 
 .directory{
@@ -110,6 +116,89 @@ section .header-wrap{
 .cloud{
 	background: url(../images/cloud-icon.png) no-repeat center 27px;
 }
+
+.tools{
+	background-color: #c6c6c6;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 0 0 12px 0;
+	margin-top: 73px;
+}
+.tools .title-wrap{
+	background-color: #2f549b;
+	display: block;
+	position: static;
+	box-sizing: border-box;
+	padding: 11px 19px;
+	width: 100%;
+}
+
+.title-wrap .title{
+	margin: 0;
+	font-size: 30px;
+	font-weight: normal;
+	color: #fff;
+	text-align: center;
+}
+.tools .icon{
+    margin: 20px 20px 0 20px;
+	display: block;
+	box-sizing: border-box;
+	text-decoration: none;
+	padding: 70px 25px 20px 25px;
+	font-size: 14px;
+	width: 100%;
+	text-align: center;
+	color: #5e5e5e;
+}
+.tools .icon:hover{
+	color: #fff;
+	border-radius: 5px;
+}
+.tools .calc{
+	background: url(../images/calc-icon.png) no-repeat center 10px;
+	background-size: 50px;
+}
+.tools .clock{
+	background: url(../images/clock-icon.png) no-repeat center 10px;
+	background-size: 50px;
+}
+.tools .config{
+	background: url(../images/config-icon.png) no-repeat center 10px;
+	background-size: 50px;    
+}
+.tools .phone{
+	background: url(../images/phone-icon.png) no-repeat center 10px;
+	background-size: 50px;
+}
+.tools .shop{
+	background: url(../images/shop-icon.png) no-repeat center 10px;
+	background-size: 50px;
+}
+.tools .shape{
+	background: url(../images/shape-icon.png) no-repeat center 10px;
+	background-size: 50px;
+}
+.tools .calc:hover{
+	background: url(../images/calc-hover-icon.png) no-repeat center 10px, #2f549b;
+}
+.tools .clock:hover{
+	background: url(../images/clock-hover-icon.png) no-repeat center 10px, #2f549b;
+}
+.tools .config:hover{
+	background: url(../images/config-hover-icon.png) no-repeat center 10px, #2f549b;
+}
+.tools .phone:hover{
+	background: url(../images/phone-hover-icon.png) no-repeat center 10px, #2f549b;
+}
+.tools .shop:hover{
+	background: url(../images/shop-hover-icon.png) no-repeat center 10px, #2f549b;
+}
+.tools .shape:hover{
+	background: url(../images/shape-hover-icon.png) no-repeat center 10px, #2f549b;
+}
 @media screen and (min-width: 440px) {
 	.header-wrap .description{
 		font-size: 13px;
@@ -120,6 +209,10 @@ section .header-wrap{
 	.col{
 		width: 70%;
 	}
+	.tools .icon{
+		width: 70%;
+	}
+
 }
 
 @media screen and (min-width: 510px) {
@@ -130,6 +223,9 @@ section .header-wrap{
 		padding: 67px 0 46px 0;
 	}
 	.col{
+		width: 45%;
+	}
+	.tools .icon{
 		width: 45%;
 	}
 }
@@ -143,17 +239,23 @@ section .header-wrap{
 	.col{
 		width: 40%;
 	}
+	.tools .icon{
+		width: 40%;
+	}
 }
 
 @media screen and (min-width: 720px) {
 	.col{
 		width: 35%;
 	}
+	.tools .icon{
+		width: 35%;
+	}
 }
 
 @media screen and (min-width: 985px) {
 	.container{
-		width: 99%;
+		width: 100%;
 	}
 	.header-wrap .description{
 		font-size: 22px;
@@ -185,6 +287,55 @@ section .header-wrap{
 	}
 	.col{
 		width: 22%;
+		margin: 0;
+	}
+	.tools{
+		padding: 43px 0 12px 6px;
+		justify-content: space-between;
+	}
+	.tools .title-wrap{
+		display: inline-block;
+		position: absolute;
+		top: -36px;
+		left: 36.5%;
+		box-sizing: border-box;
+		padding: 11px 19px;
+		width: auto;
+	}
+	.tools .icon{
+		margin: 0;
+		padding-bottom: 0;
+		width: 14.5%;
+	}
+	.tools .title-wrap::before{
+		content: "";
+		position: absolute;
+		left: -23px;
+		bottom: 0;
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 23px 23px 0;
+		border-color: transparent #1f3560 transparent transparent;
+		line-height: 0;
+		_border-color: #000000 #1f3560 #000000 #000000;
+		_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+	}
+	.tools .title-wrap::after{
+		content: "";
+		position: absolute;
+		right: -23px;
+		bottom: 0;
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 23px 23px 0 0;
+		border-color: #1f3560 transparent transparent transparent;
+		line-height: 0;
+		_border-color: #1f3560 #000000 #000000 #000000;
+		_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 	}
 
 }
